@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>FD Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="left">
+
+            <h1>FD Calculator</h1>
+
+            <p>Estimate how much your fixed deposit investment will grow over time.</p>
+
+            <div class="box">
+
+                <label>Deposit Amount (₹)</label>
+
+                <input type="number" id="amount" value="100000">
+
+                <input type="range" id="amountRange" min="10000" max="5000000" step="10000" value="100000">
+
+            </div>
+
+            <div class="box">
+
+                <label>Rate Of Return (%)</label>
+
+                <input type="number" id="rate" value="7">
+
+                <input type="range" id="rateRange" min="5" max="30" step="0.5" value="7">
+
+            </div>
+
+            <div class="box">
+
+                <label>Interest Payout</label>
+
+                <p class="cumText">
+                    Cumulative Rate Of Return is
+                    <span id="cumRate">7.19%</span>
+                </p>
+
+                <div class="btns">
+
+                    <button class="active">Quarterly</button>
+                    <button>Half yearly</button>
+                    <button>Yearly</button>
+                    <button>At Maturity</button>
+
+                </div>
+
+            </div>
+
+            <div class="box">
+
+                <label>Time Period (Years)</label>
+
+                <input type="number" id="year" value="5">
+
+                <input type="range" id="yearRange" min="1" max="50" value="5">
+
+            </div>
+
+            <button id="calculate">
+                Calculate
+            </button>
+
+        </div>
+
+        <div class="right">
+
+            <div class="top">
+
+                <div>
+
+                    <h3>Maturity Amount</h3>
+
+                    <h1 id="maturity">₹1,40,255</h1>
+
+                </div>
+
+                <div>
+
+                    <h3>Interest Earned</h3>
+
+                    <h1 id="interest">₹40,255</h1>
+
+                </div>
+
+            </div>
+
+            <div class="graph">
+                <div class="chart">
+                    <div class="bar">
+                        <span class="value"></span>
+                        <div class="fill"></div>
+                        <p>1</p>
+                    </div>
+
+                    <div class="bar">
+                        <span class="value"></span>
+                        <div class="fill"></div>
+                        <p>2</p>
+                    </div>
+
+                    <div class="bar">
+                        <span class="value"></span>
+                        <div class="fill"></div>
+                        <p>3</p>
+                    </div>
+
+                    <div class="bar">
+                        <span class="value"></span>
+                        <div class="fill"></div>
+                        <p>4</p>
+                    </div>
+
+                    <div class="bar">
+                        <span class="value"></span>
+                        <div class="fill"></div>
+                        <p>5</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bottomCards">
+
+                <div class="card1">
+
+                    <span class="tag">Personalised</span>
+
+                    <span class="arrow">↗</span>
+
+                    <h2>
+                        Check Suitable
+                        <br>
+                        Products For Your
+                        <br>
+                        Investment
+                    </h2>
+
+                    <p>Exclusively For You</p>
+
+                </div>
+
+                <div class="card2">
+
+                    <span class="arrow">↗</span>
+
+                    <h2>
+                        Need Help Finding
+                        <br>
+                        Right Product?
+                    </h2>
+
+                    <p>Get Guidance From Wealth Manager</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
